@@ -1,7 +1,7 @@
 FROM ubuntu
 
 # Add the Non-privileged user
-RUN useradd -m devops && apt update && apt install -y sudo && echo "devops ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+RUN useradd -m devops && apt update && apt install -y sudo git && echo "devops ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER devops
 WORKDIR /home/devops
 
